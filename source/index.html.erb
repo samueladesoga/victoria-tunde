@@ -92,34 +92,15 @@
                     <hr>
                     <br>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="box">
-                        <img src="images/release1.jpg" alt="">
-                        <h5>Sunday Morning</h5>
-                        <p>9 Song - 2014</p>
+                <% data.site.releases.each do |_, release| %>
+                     <div class="col-lg-3 col-sm-6">
+                        <div class="box">
+                            <img src="http:<%= release.image.url %>" alt="">
+                            <h5><%= release.title %></h5>
+                            <p><%= release.description %></p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="box">
-                        <img src="images/release2.jpg" alt="">
-                        <h5>Happy</h5>
-                        <p>11 Song - 2015</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="box">
-                        <img src="images/release3.jpg" alt="">
-                        <h5>Squad 10</h5>
-                        <p>10 Song - 2016</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="box">
-                        <img src="images/release4.jpg" alt="">
-                        <h5>Pesona</h5>
-                        <p>12 Song - 2017</p>
-                    </div>
-                </div>
+                <% end %>
             </div>
         </div>
     </div>
