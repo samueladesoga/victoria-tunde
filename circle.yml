@@ -1,8 +1,23 @@
-machine:
-  ruby:
-    version: 2.1.2
-deployment:
-  production:
-    branch: master
-    commands:
-      - bundle exec middleman s3_sync
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.3-node
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Ruby dependencies
+          working_directory: .
+          command: bundle install
+
+      - run:
+          name: Build Middleman site
+          working_directory: .
+          command: bundle exec middleman build --verbose
+      - run:
+          name: Sync to s3
+          working_directory: .
+          command: bundle exec middleman s3_sync
