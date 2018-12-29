@@ -1,248 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Victoria Tunde</title>
-
-    <!---Font Icon-->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.min.css" rel="stylesheet">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="favicon.ico" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-    <!-- Header -->
-    <header id="home">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark sticky">
-            <div class="container">
-                <a class="navbar-brand" href="/">Victoria Tunde</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#home">Home</a>
-                        <a class="nav-item nav-link" href="#about">About</a>
-                        <a class="nav-item nav-link" href="#gallery">Gallery</a>
-                        <a class="nav-item nav-link" href="#release">Releases</a>                      
-                        <a class="nav-item nav-link" href="#tour">See me Live</a>                        
-                        <a class="nav-item nav-link" href="#contact">Book Me</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item item active">
-                    <img class="d-block w-100" src="images/bg1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item item">
-                    <img class="d-block w-100" src="images/bg2.jpg" alt="Second slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-        </div>
-
-        <div class="title">
-            <h1>Victoria Tunde</h1>
-        </div>
-        <div class="download">
-            <a target="_blank" href="https://www.amazon.com/gp/product/B07L1CSQ4D" class="btn btn-light"><i class="fa fa-amazon" aria-hidden="true"></i>Download On Amazon</a>
-            <a target="_blank" href="https://play.google.com/store/music/album/Victoria_Tunde_Changed_Me?id=B5pcifn2ws44tezgozvz4p57fpm" class="btn btn-latest"><i class="fa fa-google-play" aria-hidden="true"></i>Download on Google Play</a> 
-            <a target="_blank" href="https://itunes.apple.com/us/album/changed-me-single/1445223251" class="btn btn-light"><i class="fa fa-apple" aria-hidden="true"></i>  Download On iTunes</a>
-        </div>
-    </header>
-
-    <!-- Release -->
-    <div class="release" id="release">
+<!-- Header -->
+<header id="home">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark sticky">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3>Releases <span></span></h3>
-                    <p>Some of my latest releases</p>
-                    <hr>
-                    <br>
+            <a class="navbar-brand" href="/">Victoria Tunde</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#home">Home</a>
+                    <a class="nav-item nav-link" href="#about">About</a>
+                    <a class="nav-item nav-link" href="#gallery">Gallery</a>
+                    <a class="nav-item nav-link" href="#release">Releases</a>                      
+                    <a class="nav-item nav-link" href="#tour">See me Live</a>                        
+                    <a class="nav-item nav-link" href="#contact">Book Me</a>
                 </div>
-                <% data.site.releases.each do |_, release| %>
-                     <div class="col-lg-3 col-sm-6">
-                        <div class="box">
-                            <img src="http:<%= release.image.url %>" alt="">
-                            <h5><%= release.title %></h5>
-                            <p><%= release.description %></p>
-                        </div>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item item active">
+                <img class="d-block w-100" src="images/bg1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item item">
+                <img class="d-block w-100" src="images/bg2.jpg" alt="Second slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+
+    <div class="title">
+        <h1>Victoria Tunde</h1>
+    </div>
+    <div class="download">
+        <a target="_blank" href="https://www.amazon.com/gp/product/B07L1CSQ4D" class="btn btn-light"><i class="fa fa-amazon" aria-hidden="true"></i>Download On Amazon</a>
+        <a target="_blank" href="https://play.google.com/store/music/album/Victoria_Tunde_Changed_Me?id=B5pcifn2ws44tezgozvz4p57fpm" class="btn btn-latest"><i class="fa fa-google-play" aria-hidden="true"></i>Download on Google Play</a> 
+        <a target="_blank" href="https://itunes.apple.com/us/album/changed-me-single/1445223251" class="btn btn-light"><i class="fa fa-apple" aria-hidden="true"></i>  Download On iTunes</a>
+    </div>
+</header>
+
+<!-- Release -->
+<div class="release" id="release">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Releases <span></span></h3>
+                <p>Some of my latest releases</p>
+                <hr>
+                <br>
+            </div>
+            <% data.site.releases.each do |_, release| %>
+                 <div class="col-lg-3 col-sm-6">
+                    <div class="box">
+                        <img src="http:<%= release.image.url %>" alt="">
+                        <h5><%= release.title %></h5>
+                        <p><%= release.description %></p>
                     </div>
-                <% end %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<!-- Gallery -->
+<div class="gallery" id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Gallery<span></span></h3>
+                <hr>
+                <br>
+            </div>
+            <div class="col-lg-12">
+                <ul>
+                    <% data.site.galleries.each do |_, gallery| %>
+                        <li><img src="http:<%= gallery.gallery_image.url %>" alt="<%= gallery.gallery_image.title %>"></li>
+                    <% end %>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Gallery -->
-    <div class="gallery" id="gallery">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3>Gallery<span></span></h3>
-                    <hr>
-                    <br>
+<div class="tour" id="tour">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>See me live <span></span></h3>
+                <p>If you would like to join me, meet me at any of the events closest to you</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="card-group">
+                    <% data.site.events.sort{|e1, e2|e1[1]["event_date"] <=> e2[1]["event_date"]}.each do |_, event| %>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title"><%= event.title %></p>
+                                <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= event.location %></p>
+                                <a href="<%= event.eventUrl %>" class="btn btn-light"><%= event.call_to_action %></a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted"><i class="fa fa-calendar" aria-hidden="true"></i> <%= event.event_date.strftime("%A, %d %b %Y %l:%M %p") %></small>
+                            </div>
+                        </div>
+                    <% end %>
                 </div>
-                <div class="col-lg-12">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<div class="about" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>About <span></span></h3>
+                <hr>
+                <br>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="box">
+                    <img src="images/member1.jpg" alt="">
                     <ul>
-                        <% data.site.galleries.each do |_, gallery| %>
-                            <li><img src="http:<%= gallery.gallery_image.url %>" alt="<%= gallery.gallery_image.title %>"></li>
-                        <% end %>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/victoriatunde_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
                     </ul>
                 </div>
+
+            </div>
+            <div class="col-lg-9 col-sm-6">
+                <div class="box">
+                    <p>Victoria Tunde is an independent gospel singer and songwriter who was born and raised in London.</p>
+                    <p>As a long serving choir member and lead singer at her Church, this seasoned banker with over 18 years in the financial services industry has juggled a busy work life and her commitment as a passionate worship leader. </p>
+                    <p>Her love and devotion for God have continued to propel her incredibly expressive voice in ways which have ministered God’s peace, His love and purity. Her rich blend of musical tones tell stories with a propensity to capture her audience as well as advance an atmosphere for worship and a vehicle into God’s presence.</p>
+                    <p>The December 2018 release of Victoria Tunde’s debut single “Changed Me” - is a fulfilment of a God given assignment (2 Tim 1:7). Her sound has been described as new and is birthed out of her personal walk with God. Married for 12 solid years to the love of her life, Oluwaseyi Babatunde - a wonderful, supportive and spirit led man. Together they are raising two blessed, beautiful and bright children (Grace and Ruth).
+                    </p>
+                    <p>Growing up in inner city London, Victoria developed a passion for mentoring and coaching young people. Over the years she has worked with many young people to help them identify and reach their full professional and entrepreneurial potentials. Her catchphrase is to ‘always leave people better than when you met them’ and as a result has carried with her the maxim, “pay it forward”. </p>
+                    <p>This is only the beginning so watch this space!</p>
+                    
+                </div>
+
             </div>
         </div>
     </div>
+</div>
 
-    <div class="tour" id="tour">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h3>See me live <span></span></h3>
-                    <p>If you would like to join me, meet me at any of the events closest to you</p>
-                </div>
-                <div class="col-lg-8">
-                    <div class="card-group">
-                        <% data.site.events.sort{|e1, e2|e1[1]["event_date"] <=> e2[1]["event_date"]}.each do |_, event| %>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title"><%= event.title %></p>
-                                    <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= event.location %></p>
-                                    <a href="<%= event.eventUrl %>" class="btn btn-light"><%= event.call_to_action %></a>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted"><i class="fa fa-calendar" aria-hidden="true"></i> <%= event.event_date.strftime("%A, %d %b %Y %l:%M %p") %></small>
-                                </div>
-                            </div>
-                        <% end %>
-                    </div>
-                </div>
+<!-- Contact -->
+<div class="contact" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Contact Me<span></span></h3>
+                <p>For all booking and general enquiries, drop me a note ...</p>
+                <hr>
+                <br>
+                <div id="contact_results"></div>
             </div>
-        </div>
-    </div>
-
-    <!-- About -->
-    <div class="about" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3>About <span></span></h3>
-                    <hr>
-                    <br>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="box">
-                        <img src="images/member1.jpg" alt="">
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/victoriatunde_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="col-lg-9 col-sm-6">
-                    <div class="box">
-                        <p>Victoria Tunde is an independent gospel singer and songwriter who was born and raised in London.</p>
-                        <p>As a long serving choir member and lead singer at her Church, this seasoned banker with over 18 years in the financial services industry has juggled a busy work life and her commitment as a passionate worship leader. </p>
-                        <p>Her love and devotion for God have continued to propel her incredibly expressive voice in ways which have ministered God’s peace, His love and purity. Her rich blend of musical tones tell stories with a propensity to capture her audience as well as advance an atmosphere for worship and a vehicle into God’s presence.</p>
-                        <p>The December 2018 release of Victoria Tunde’s debut single “Changed Me” - is a fulfilment of a God given assignment (2 Tim 1:7). Her sound has been described as new and is birthed out of her personal walk with God. Married for 12 solid years to the love of her life, Oluwaseyi Babatunde - a wonderful, supportive and spirit led man. Together they are raising two blessed, beautiful and bright children (Grace and Ruth).
-                        </p>
-                        <p>Growing up in inner city London, Victoria developed a passion for mentoring and coaching young people. Over the years she has worked with many young people to help them identify and reach their full professional and entrepreneurial potentials. Her catchphrase is to ‘always leave people better than when you met them’ and as a result has carried with her the maxim, “pay it forward”. </p>
-                        <p>This is only the beginning so watch this space!</p>
-                        
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact -->
-    <div class="contact" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3>Contact Me<span></span></h3>
-                    <p>For all booking and general enquiries, drop me a note ...</p>
-                    <hr>
-                    <br>
-                    <div id="contact_results"></div>
-                </div>
-                <div class="col-lg-12">
-                    <form class="contact">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="col-form-label">Name</label>
-                                    <input id="name" type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="col-form-label">Email</label>
-                                    <input id="email" type="email" class="form-control">
-                                </div>
+            <div class="col-lg-12">
+                <form class="contact">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Name</label>
+                                <input id="name" type="text" class="form-control">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5"></textarea>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Email</label>
+                                <input id="email" type="email" class="form-control">
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-light">Send Message</button>
-                        <p class="small">By clicking on the submit button you are consenting to receive updates, promotions and offers from Victoria Tunde. You  have the right to withdraw your consent at anytime by emailing us. </p>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light">Send Message</button>
+                    <p class="small">By clicking on the submit button you are consenting to receive updates, promotions and offers from Victoria Tunde. You  have the right to withdraw your consent at anytime by emailing us. </p>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Footer-->
-    <footer>
-        Made with <i class="fa fa-heart" aria-hidden="true"></i> &#8212; &copy; 2018
-    </footer>
+<!-- Footer-->
+<footer>
+    Made with <i class="fa fa-heart" aria-hidden="true"></i> &#8212; &copy; 2018
+</footer>
 
 
 
-    <!-- Javascript -->
-    <script src="js/plugins/jquery.min.js"></script>
-    <script src="js/plugins/popper.min.js"></script>
-    <script src="js/plugins/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/contact.js"></script>
-
-</body>
-
-</html>
+<!-- Javascript -->
+<script src="js/plugins/jquery.min.js"></script>
+<script src="js/plugins/popper.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/contact.js"></script>
