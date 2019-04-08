@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
     $("button[type=submit]").click(function(e) {
         e.preventDefault();       
         var proceed = true;
@@ -47,4 +47,4 @@ $(document).ready(function() {
         $(this).css('border-color','');
         $("#result").slideUp();
     });
-});
+});*/
