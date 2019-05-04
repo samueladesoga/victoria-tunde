@@ -13,7 +13,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-activate :dotenv
 activate :contentful do |f|
   f.space         = { site: ENV['CONTENTFUL_SPACE_ID'] }
   f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
